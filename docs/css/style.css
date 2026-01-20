@@ -121,3 +121,20 @@ body {
 .studio-name {
     animation: subtleGlitch 6s infinite;
 }
+
+/* ---------------- FLAGS ---------------- */
+
+.flag {
+    width: 22px;
+    height: auto;
+    margin-right: 10px;
+    vertical-align: middle;
+    image-rendering: crisp-edges;
+}
+
+.btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}

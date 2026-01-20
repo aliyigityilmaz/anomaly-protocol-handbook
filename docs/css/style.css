@@ -61,8 +61,8 @@ body {
 
 .btn {
     text-decoration: none;
-    color: #0e0e0e;
-    background: #ff4c4c;
+    color: #130E0E;
+    background: #BC2020 ;
     padding: 15px;
     border-radius: 4px;
     font-weight: bold;
@@ -71,7 +71,7 @@ body {
 }
 
 .btn:hover {
-    background: #ff7777;
+    background: #ff3e3e;
     letter-spacing: 2px;
 }
 
@@ -137,4 +137,59 @@ body {
     align-items: center;
     justify-content: center;
     gap: 8px;
+}
+
+/* ---------------- BUTTON ROW ---------------- */
+
+.button-row {
+    display: flex;
+    gap: 15px;
+    width: 100%;
+}
+
+.btn-half {
+    flex: 1;
+    padding: 10px 12px;
+    font-size: 13px;
+    letter-spacing: 0.5px;
+}
+
+
+.icon {
+    width: 14px;
+    height: 14px;
+    filter: brightness(0) invert(1);
+    margin-top: 1px;
+}
+
+/* ---------------- STEAM BUTTON ---------------- */
+
+.btn-steam {
+    background: #2a2a2a; 
+    color: #ffffff;
+}
+
+.btn-steam:hover {
+    background: #3a3a3a;
+}
+
+/* ---------------- DISCORD BUTTON ---------------- */
+
+.btn-discord {
+    background: #4e5bd7;
+    color: #ffffff;
+}
+
+.btn-discord:hover {
+    background: #5f6cf0;
+}
+
+
+/* ---------------- MAIN CTA BUTTON ---------------- */
+
+.btn-main {
+    font-size: 20px;
+    font-weight: 900; 
+    padding: 18px;   
+    letter-spacing: 1.5px;
 }

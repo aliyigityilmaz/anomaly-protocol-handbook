@@ -5,27 +5,59 @@ body {
     margin: 0;
 }
 
+/* ---------------- HEADER / LOGO ---------------- */
+
+.header {
+    position: relative;
+    text-align: center;
+    margin-top: 40px;
+}
+
+.header-inner {
+    position: relative;
+    display: inline-block;
+}
+
+.title-image {
+    max-width: 600px;
+    width: 90%;
+    display: block;
+}
+
+.studio-name {
+    position: absolute;
+    right: 0;
+    bottom: -18px;
+    font-size: 12px;
+    opacity: 0.6;
+    color: #e0e0e0;
+    letter-spacing: 1px;
+}
+
+
+
+/* ---------------- MAIN CONTENT ---------------- */
+
 .container {
     max-width: 800px;
-    margin: 100px auto;
+    margin: 80px auto 0;
     text-align: center;
 }
 
-h1 {
-    letter-spacing: 3px;
-    color: #ff4c4c;
+.subtitle {
+    margin: 10px 0 30px;
+    opacity: 0.85;
+    font-weight: bold; 
 }
 
-.subtitle {
-    margin: 20px 0 40px;
-    opacity: 0.8;
-}
 
 .buttons {
     display: flex;
     flex-direction: column;
     gap: 15px;
 }
+
+/* ---------------- BUTTONS ---------------- */
 
 .btn {
     text-decoration: none;
@@ -34,11 +66,16 @@ h1 {
     padding: 15px;
     border-radius: 4px;
     font-weight: bold;
+    transition: background 0.2s ease;
+    letter-spacing: 1px;
 }
 
 .btn:hover {
     background: #ff7777;
+    letter-spacing: 2px;
 }
+
+/* ---------------- NAV / FOOTER ---------------- */
 
 .back {
     display: block;
@@ -48,7 +85,39 @@ h1 {
 }
 
 .footer {
-    margin-top: 60px;
+    position: fixed;
+    bottom: 15px;
+    left: 50%;
+    transform: translateX(-50%);
     font-size: 12px;
     opacity: 0.6;
+    pointer-events: none;
+}
+
+/* ---------------- MOBILE ---------------- */
+
+@media (max-width: 600px) {
+    .title-image {
+        max-width: 90%;
+    }
+
+    .container {
+        margin-top: 60px;
+    }
+}
+
+/* ---------------- SUBTLE GLITCH ---------------- */
+
+@keyframes subtleGlitch {
+    0% { transform: translate(0); opacity: 0.6; }
+    92% { transform: translate(0); opacity: 0.6; }
+    93% { transform: translate(-1px, 0); opacity: 0.7; }
+    94% { transform: translate(1px, 0); }
+    95% { transform: translate(0, 1px); }
+    96% { transform: translate(0); }
+    100% { transform: translate(0); }
+}
+
+.studio-name {
+    animation: subtleGlitch 6s infinite;
 }

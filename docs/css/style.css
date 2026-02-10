@@ -19,7 +19,6 @@ body {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    background-attachment: fixed;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -774,24 +773,31 @@ body {
     }
 }
 /* ============ HERO IMAGE MOBILE FIX ============ */
+
 @media (max-width: 768px) {
 
     .header {
-        aspect-ratio: 9 / 16;   /* mobil poster oranı */
+        aspect-ratio: 9 / 16;
         min-height: unset;
+        background-attachment: scroll;
+        background-size: cover;
+        background-position: center top;
+        display: flex;
+        align-items: flex-end;
+        padding-bottom: 40px;
     }
-}
 
-@media (max-width: 768px) {
+    .title-image {
+        max-width: 320px;
+    }
 
     .header-demo {
-        margin-top: -10px;
         font-size: 15px;
+        margin-top: 10px;
     }
 
     .studio-name {
-        bottom: 35px;
+        bottom: 20px;
         font-size: 10px;
-        opacity: 0.7;
     }
 }

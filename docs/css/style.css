@@ -772,32 +772,38 @@ body {
         font-size: 13px;
     }
 }
-/* ============ HERO IMAGE MOBILE FIX ============ */
 
-@media (max-width: 768px) {
-
+/* HEADER HERO - MOBIL DÜZENLEME */
+@media (max-width: 900px) {
     .header {
-        aspect-ratio: 9 / 16;
-        min-height: unset;
-        background-attachment: scroll;
+        min-height: 0;
+        height: 100vh;          /* tam ekran yüksekliği */
         background-size: cover;
-        background-position: center top;
+        background-position: center;
+        background-attachment: scroll;
         display: flex;
-        align-items: flex-end;
-        padding-bottom: 40px;
+        align-items: center;     /* içerik ortaya */
+        justify-content: center;
+        padding: 0 20px;
+    }
+
+    .header-inner {
+        width: 100%;
+        max-width: 100%;         /* parent sınırı kaldır */
     }
 
     .title-image {
-        max-width: 320px;
-    }
-
-    .header-demo {
-        font-size: 15px;
-        margin-top: 10px;
+        max-width: 90%;          /* görselin %90sını alır */
+        height: auto;
     }
 
     .studio-name {
         bottom: 20px;
         font-size: 10px;
+    }
+
+    .header-demo {
+        font-size: 14px;
+        margin-top: 10px;
     }
 }

@@ -773,3 +773,12 @@ body {
         font-size: 13px;
     }
 }
+/* ============ HERO IMAGE MOBILE FIX ============ */
+@media (max-width: 768px) {
+
+    .header {
+        min-height: 520px;              /* biraz nefes */
+        background-size: 130%;          /* ZOOM IN */
+        background-position: center top;/* üstten karakter gelsin */
+    }
+}

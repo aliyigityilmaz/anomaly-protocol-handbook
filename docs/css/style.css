@@ -509,3 +509,135 @@ body {
     }
 }
 
+/* ================= GAME INTRO SECTION ================= */
+
+.game-intro {
+    max-width: 1100px;
+    margin: 100px auto 0;
+    padding: 0 20px;
+}
+
+.game-intro-inner {
+    display: flex;
+    gap: 60px;
+    padding: 50px;
+    background: #111;
+    border: 1px solid #2a2a2a;
+    border-radius: 12px;
+}
+
+/* LEFT */
+
+.intro-text {
+    flex: 1.2;
+}
+
+.intro-text h2 {
+    font-size: 28px;
+    font-weight: 900;
+    letter-spacing: 1.5px;
+    margin-bottom: 20px;
+}
+
+.intro-description {
+    font-size: 15px;
+    line-height: 1.8;
+    opacity: 0.9;
+}
+
+/* RIGHT */
+
+.intro-manual {
+    flex: 0.8;
+    background: #0b0b0b;
+    border: 1px solid #2a2a2a;
+    border-radius: 10px;
+    padding: 35px;
+    text-align: center;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    margin-top: -25px; /* 👈 HAFİF YUKARI */
+}
+
+
+.intro-manual h3 {
+    font-size: 22px;
+    font-weight: 900;
+    margin-bottom: 25px;
+    letter-spacing: 1.2px;
+}
+
+/* MANUAL BUTTON */
+
+.manual-btn {
+    display: inline-block;
+    background: #BC2020;
+    color: #130E0E;
+    text-decoration: none;
+    padding: 18px;
+    font-weight: 900;
+    font-size: 18px;
+    letter-spacing: 1.2px;
+    border-radius: 6px;
+    transition: background 0.2s ease, letter-spacing 0.2s ease;
+}
+
+.manual-btn:hover {
+    background: #ff3e3e;
+    letter-spacing: 2px;
+}
+
+/* NOTE */
+
+.manual-note {
+    margin-top: 20px;
+    font-size: 12px;
+    opacity: 0.65;
+    line-height: 1.5;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 900px) {
+    .game-intro-inner {
+        flex-direction: column;
+        gap: 40px;
+    }
+}
+/* ================= STEAM BUTTON (INSIDE MANUAL) ================= */
+
+.steam-btn {
+    margin-top: 28px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+
+    background: #1b1b1b;
+    border: 1px solid #2a2a2a;
+    border-radius: 6px;
+
+    padding: 14px;
+    text-decoration: none;
+
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: 1px;
+
+    transition: background 0.2s ease, transform 0.15s ease;
+}
+
+.steam-btn img {
+    width: 20px;
+    height: 20px;
+}
+
+.steam-btn:hover {
+    background: #2a2a2a;
+    transform: translateY(-2px);
+}
+

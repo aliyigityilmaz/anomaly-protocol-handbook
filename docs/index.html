@@ -176,17 +176,22 @@
 
 <!-- ================= GAME TRAILER + STEAM ================= -->
 <div class="game-trailer">
+
     <h2>Watch the Trailer</h2>
 
-    <!-- Steam Trailer Video -->
-    <div class="trailer-video">
-        <iframe 
-            src="https://store.steampowered.com/video/4251090/ss_1/?autoplay=0" 
-            title="Game Trailer"
-            frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-            allowfullscreen>
-        </iframe>
+    <!-- GAMEPLAY VIDEO -->
+    <div class="gameplay-video">
+        <video 
+            autoplay 
+            muted 
+            loop 
+            playsinline
+            disablepictureinpicture
+            controlslist="nodownload nofullscreen noremoteplayback"
+            oncontextmenu="return false;">
+            
+            <source src="assets/videos/gameplaytrailer.mp4" type="video/mp4">
+        </video>
     </div>
 
     <!-- Steam Buy Now Button -->
@@ -196,7 +201,33 @@
         <img src="assets/icons/steam.svg" alt="Steam Icon"> 
         Buy Now on Steam
     </a>
+
+    <!-- POSTER IMAGE -->
+    <div class="trailer-poster">
+        <img src="assets/others/poster1.jpg" 
+             alt="Game Poster"
+             draggable="false"
+             oncontextmenu="return false;">
+    </div>
+
+    <!-- DISCORD CTA -->
+    <div class="discord-cta">
+        <h3>Want to Join the Containment Team?</h3>
+        <p>
+            Become part of our growing community.  
+            Get updates, share feedback, and connect with other researchers.
+        </p>
+
+        <a href="https://discord.gg/mrexGmcX9n"
+           target="_blank"
+           class="discord-btn">
+            <img src="assets/icons/discord.png" alt="Discord">
+            Join Our Discord
+        </a>
+    </div>
+
 </div>
+
 
 
 

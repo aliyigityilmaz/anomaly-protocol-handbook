@@ -1188,3 +1188,24 @@ body {
         max-width: 100%;
     }
 }
+
+/* ================= POSTER LIGHT SECTION ================= */
+
+.poster-section {
+    background: #1c1c1c;   /* açık gri */
+    padding: 20px 20px;   /* üst-alt boşluk */
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.poster-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.poster-section .trailer-poster {
+    max-width: 650px;
+    margin: 0 auto;
+    border: none;              /* koyu border kaldırdık */
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15); /* hafif derinlik */
+}

@@ -240,11 +240,29 @@ body {
 
 /* ---------------- GRID DÜZEN ---------------- */
 
+/* ================= LANGUAGE GRID ================= */
+
+/* DESKTOP (5'li) */
 .language-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    grid-template-columns: repeat(5, 1fr);
     gap: 20px;
     margin-top: 40px;
+}
+
+/* TABLET (3'lü) */
+@media (max-width: 1100px) {
+    .language-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/* MOBİL (2'li) */
+@media (max-width: 600px) {
+    .language-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+    }
 }
 
 .language-card {
@@ -809,28 +827,34 @@ body {
 }
 
 
+/* ================= BODY (Sticky Footer System) ================= */
+body {
+    background-color: #0e0e0e;
+    color: #e0e0e0;
+    font-family: monospace;
+
+    margin: 0;
+    padding-top: 56px; /* top bar için */
+
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+
 /* ================= FOOTER ================= */
 .site-footer {
     width: 100%;
     background-color: #0b0b0b;
     border-top: 1px solid #2a2a2a;
     padding: 15px 20px;
-    position: absolute;   /* en alta yapışık */
-    bottom: 0;
-    left: 0;
-    z-index: 999;
+
+    margin-top: auto; /* footer'ı en alta iter */
     box-sizing: border-box;
 }
 
-body {
-    min-height: 100vh;
-    position: relative;
-    margin: 0;
-    padding-top: 56px; /* top bar için */
-    padding-bottom: 150px; /* footer ile içerik arası boşluk */
-}
 
-
+/* ================= FOOTER INNER ================= */
 .footer-inner {
     max-width: 1200px;
     margin: 0 auto;
@@ -839,6 +863,7 @@ body {
     align-items: center;
     flex-wrap: wrap;
 }
+
 
 /* LEFT SIDE */
 .footer-left {
@@ -1075,6 +1100,7 @@ body {
 
 .discord-cta {
     margin-top: 50px;
+    margin-bottom: 50px;
     padding: 40px 30px;
     background: #111;
     border: 1px solid #2a2a2a;
@@ -1093,7 +1119,7 @@ body {
 .discord-cta p {
     font-size: 14px;
     opacity: 0.8;
-    margin-bottom: 25px;
+    margin-bottom: 50px;
     line-height: 1.6;
 }
 
@@ -1142,4 +1168,23 @@ body {
     object-fit: cover; /* kesilmesini istemezsen contain yap */
     display: block;
     pointer-events: none;
+}
+
+@media (max-width: 900px) {
+    .header {
+        height: auto;
+        min-height: 420px;
+        padding: 60px 20px;
+    }
+}
+
+@media (max-width: 900px) {
+    .game-details-inner {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .details-slideshow {
+        max-width: 100%;
+    }
 }

@@ -1,45 +1,81 @@
-// SLIDESHOW SCRIPT
+document.addEventListener("DOMContentLoaded", function () {
 
-const slides = document.querySelectorAll(".details-slideshow .slide");
-let current = 0;
+    // ================= SLIDESHOW =================
 
-// Gösterim fonksiyonu
-function showSlide(index) {
-    slides.forEach((slide, i) => {
-        slide.classList.toggle("active", i === index);
-    });
-}
+    const slides = document.querySelectorAll(".details-slideshow .slide");
+    let current = 0;
+    let slideInterval;
 
-// Otomatik geçiş
-let slideInterval = setInterval(() => {
-    current = (current + 1) % slides.length;
-    showSlide(current);
-}, 3000); // 3 saniyede bir
+    function showSlide(index) {
+        slides.forEach((slide, i) => {
+            slide.classList.toggle("active", i === index);
+        });
+    }
 
-// Tıklama ile geçiş
-document.querySelector(".details-slideshow").addEventListener("click", () => {
-    clearInterval(slideInterval); // otomatik geçiş durdur
-    current = (current + 1) % slides.length;
-    showSlide(current);
+    function startAutoSlide() {
+        slideInterval = setInterval(() => {
+            current = (current + 1) % slides.length;
+            showSlide(current);
+        }, 3000);
+    }
 
-    // 3 saniye sonra tekrar otomatik geçiş başlasın
-    slideInterval = setInterval(() => {
-        current = (current + 1) % slides.length;
+    function resetAutoSlide() {
+        clearInterval(slideInterval);
+        startAutoSlide();
+    }
+
+    if (slides.length > 0) {
         showSlide(current);
-    }, 3000);
-});
+        startAutoSlide();
 
+        const slideshow = document.querySelector(".details-slideshow");
 
-// SMOOTH SCROLL FOR "ABOUT" LINK
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
-        e.preventDefault(); // normal jump'u engelle
+        slideshow.addEventListener("click", () => {
+            current = (current + 1) % slides.length;
+            showSlide(current);
+            resetAutoSlide();
+        });
+    }
 
-        const target = document.querySelector(this.getAttribute('href'));
-        if (target) {
-            target.scrollIntoView({
-                behavior: 'smooth'  // burada smooth scroll uygulanıyor
-            });
-        }
+    // ================= SMOOTH SCROLL =================
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+
+            const target = document.querySelector(this.getAttribute("href"));
+            if (target) {
+                target.scrollIntoView({
+                    behavior: "smooth"
+                });
+            }
+        });
     });
+
+    // ================= POSTER MODAL =================
+
+    const poster = document.querySelector(".art-section .trailer-poster");
+    const modal = document.getElementById("posterModal");
+
+    if (poster && modal) {
+
+        poster.addEventListener("click", function () {
+            modal.classList.add("active");
+            document.body.style.overflow = "hidden";
+        });
+
+        modal.addEventListener("click", function () {
+            modal.classList.remove("active");
+            document.body.style.overflow = "auto";
+        });
+
+        // ESC tuşuyla kapatma (bonus)
+        document.addEventListener("keydown", function (e) {
+            if (e.key === "Escape") {
+                modal.classList.remove("active");
+                document.body.style.overflow = "auto";
+            }
+        });
+    }
+
 });

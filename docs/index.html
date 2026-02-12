@@ -132,7 +132,6 @@
 </div>
 
 
-    </div>
 </div>
 
 
@@ -215,18 +214,53 @@
         Buy Now on Steam
     </a>
 
-    <!-- POSTER IMAGE -->
-<!-- POSTER SECTION -->
-<section class="poster-section">
-    <div class="poster-inner">
-        <div class="trailer-poster">
-            <img src="assets/others/poster1.jpg" 
-                 alt="Game Poster"
+<!-- ================= ART / POSTER SECTION ================= -->
+<section class="art-section">
+    <div class="art-container">
+
+        <!-- LEFT ARROW -->
+        <button class="art-arrow left" id="artPrev">&#10094;</button>
+
+        <!-- SLIDER WRAPPER -->
+        <div class="art-slider" id="artSlider">
+            <div class="art-track">
+
+                <!-- ITEM 1 -->
+                <div class="art-item">
+    <div class="poster-wrapper">
+
+        <div class="trailer-poster" id="posterTrigger">
+            <img src="assets/others/poster1.jpg"
+                 alt="Scientist Propaganda Poster"
                  draggable="false"
                  oncontextmenu="return false;">
         </div>
+
+        <!-- ALT YAZI -->
+        <div class="poster-caption">
+            <h4>Scientist Propaganda Poster</h4>
+            <span>by @nicotinehound</span>
+        </div>
+
+    </div>
+</div>
+
+
+            </div>
+        </div>
+
+        <!-- RIGHT ARROW -->
+        <button class="art-arrow right" id="artNext">&#10095;</button>
+
     </div>
 </section>
+
+<!-- POSTER POPUP MODAL -->
+<div class="poster-modal" id="posterModal">
+    <div class="poster-modal-inner">
+        <img src="assets/others/poster1.jpg" alt="Scientist Propaganda Poster">
+    </div>
+</div>
 
 
     <!-- DISCORD CTA -->

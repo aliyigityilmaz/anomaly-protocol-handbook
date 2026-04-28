@@ -3,102 +3,87 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Başlık ve açıklama (SEO) -->
     <title>Keep It Contained - Triarch Interactive</title>
     <meta name="description" content="Authorized personnel only. This website accompanies the Keep It Contained game by Triarch Interactive.">
-
-    <!-- Arama motorlarına sitenin taranmasını söyle -->
     <meta name="robots" content="index, follow">
-<!-- Canonical URL -->
-<link rel="canonical" href="https://www.keepitcontained.net/">
-
-<!-- Organization Schema (Google logo için) -->
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Organization",
-  "name": "Triarch Interactive",
-  "url": "https://www.keepitcontained.net/",
-  "logo": "https://www.keepitcontained.net/assets/companylogo.png"
-}
-</script>
-
-    <!-- Open Graph: Sosyal paylaşım için -->
+    <link rel="canonical" href="https://www.keepitcontained.net/">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Triarch Interactive",
+      "url": "https://www.keepitcontained.net/",
+      "logo": "https://www.keepitcontained.net/assets/companylogo.png"
+    }
+    </script>
     <meta property="og:title" content="Keep It Contained - Triarch Interactive">
     <meta property="og:description" content="Authorized personnel only. This website accompanies the Keep It Contained game by Triarch Interactive.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://www.keepitcontained.net">
     <meta property="og:image" content="https://www.keepitcontained.net/assets/game_title.png">
-
-    <!-- Twitter Card: Twitter paylaşımları için -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Keep It Contained - Triarch Interactive">
     <meta name="twitter:description" content="Authorized personnel only. This website accompanies the Keep It Contained game by Triarch Interactive.">
     <meta name="twitter:image" content="https://www.keepitcontained.net/assets/game_title.png">
-
-    <!-- Favicon -->
     <link rel="icon" type="image/png" href="assets/gameicon.png">
-
-    <!-- CSS -->
     <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
+
 <!-- TOP NAV BAR -->
 <div class="top-bar">
     <div class="top-bar-inner">
-
-        <!-- LEFT: LOGO -->
         <a href="index.html" class="top-logo logo-group">
-    <img src="assets/game_title.png" alt="Game Logo" class="game-logo">
-    <img src="assets/companylogo.png" alt="Company Logo" class="company-logo">
-</a>
-
-
-
-        <!-- RIGHT: NAV LINKS -->
+            <img src="assets/game_title.png" alt="Game Logo" class="game-logo">
+            <img src="assets/companylogo.png" alt="Company Logo" class="company-logo">
+        </a>
         <nav class="top-nav">
-            <a href="https://store.steampowered.com/app/4251090/Keep_It_Contained/" target="_blank">
-                Buy Now
-            </a>
-            <a href="contact.html">
-                Contact Us
-            </a>
-            <a href="manuals.html">
-                Manuals
-            </a>
-            <a href="#about">
-                About
-            </a>
+            <a href="https://store.steampowered.com/app/4251090/Keep_It_Contained/" target="_blank">Buy Now</a>
+            <a href="contact.html">Contact Us</a>
+            <a href="manuals.html">Manuals</a>
+            <a href="#about">About</a>
         </nav>
-
     </div>
 </div>
 
+<!-- STATUS STRIP -->
+<div class="status-strip">
+    <div class="status-item">
+        <span class="status-dot dot-warn"></span>
+        Containment Status: Elevated
+    </div>
+    <div class="status-item">
+        <span class="status-dot dot-ok"></span>
+        Personnel: Authorized
+    </div>
+    <div class="status-item">
+        <span class="status-dot dot-alert"></span>
+        Anomaly Level: 3
+    </div>
+    <span class="status-strip-right">SECTOR 7 — DEEP UNIT — FACILITY ALPHA</span>
+</div>
 
-    <!-- HEADER / LOGO -->
-    <div class="header">
+<!-- HEADER / LOGO -->
+<div class="header">
     <div class="header-inner">
-    <img src="assets/game_title.png" alt="Anomaly Containment Protocol" class="title-image">
-    <span class="studio-name">Triarch Interactive</span>
-
+        <img src="assets/game_title.png" alt="Anomaly Containment Protocol" class="title-image">
+        <span class="studio-name">Triarch Interactive</span>
         <a href="https://store.steampowered.com/app/4251090/Keep_It_Contained/"
             target="_blank"
             class="header-demo">
-            DEMO IS NOW AVAILABLE ON STEAM!
+            DEMO IS NOW AVAILABLE ON STEAM
         </a>
     </div>
-
 </div>
-<!-- ================= GAME INTRO SECTION ================= -->
 
+<!-- GAME INTRO SECTION -->
 <section class="game-intro" id="about">
     <div class="game-intro-inner">
 
         <!-- LEFT CONTENT -->
         <div class="intro-text">
             <h2>Co-op Anomaly Containment Experience</h2>
-
             <p class="intro-description">
                 You are a field scientist stationed in a deep underground research facility.
                 A hostile anomaly is attempting to breach containment — and you are the last line of defense.
@@ -112,34 +97,25 @@
 
         <!-- RIGHT CONTENT -->
         <div class="intro-manual">
-    <h3>Protocol Manual</h3>
-
-    <a href="manuals.html" class="manual-btn">
-        Open Containment Protocol
-    </a>
-
-    <span class="manual-note">
-        Internal documentation for trained personnel only.
-    </span>
-
-    <!-- STEAM BUTTON -->
-    <a href="https://store.steampowered.com/app/4251090/Keep_It_Contained/"
-       target="_blank"
-       class="steam-btn">
-        <img src="assets/icons/steam.svg" alt="Steam">
-        Download on Steam
-    </a>
-</div>
-
-
-</div>
-
+            <h3>Protocol Manual</h3>
+            <a href="manuals.html" class="manual-btn">
+                Open Containment Protocol
+            </a>
+            <span class="manual-note">
+                Internal documentation for trained personnel only.
+            </span>
+            <a href="https://store.steampowered.com/app/4251090/Keep_It_Contained/"
+               target="_blank"
+               class="steam-btn">
+                <img src="assets/icons/steam.svg" alt="Steam">
+                Download on Steam
+            </a>
+        </div>
 
     </div>
 </section>
 
-
-<!-- ================= GAME DETAILS SECTION ================= -->
+<!-- GAME DETAILS SECTION -->
 <section class="game-details">
     <div class="game-details-inner">
 
@@ -156,22 +132,18 @@
         <!-- RIGHT: GAME DETAILS -->
         <div class="details-text">
             <h2>Game Highlights</h2>
-
             <div class="detail-item">
-                <h3>Different Levels Everytime</h3>
+                <h3>Different Levels Every Time</h3>
                 <p>Each session offers new challenges and layouts to keep you on your toes.</p>
             </div>
-
             <div class="detail-item">
                 <h3>Co-op Party Game</h3>
                 <p>Team up with friends to contain anomalies and survive together.</p>
             </div>
-
             <div class="detail-item">
                 <h3>Only One Copy Needed</h3>
                 <p>Invite friends to join without requiring multiple copies of the game.</p>
             </div>
-
             <div class="detail-item">
                 <h3>Increasing Difficulty</h3>
                 <p>The game becomes more challenging as you progress, testing your skills and teamwork.</p>
@@ -181,96 +153,83 @@
     </div>
 </section>
 
-
-<!-- ================= SLIDESHOW SCRIPT ================= -->
+<!-- SLIDESHOW SCRIPT -->
 <script src="js/slideshow.js"></script>
 
-
-<!-- ================= GAME TRAILER + STEAM ================= -->
+<!-- GAME TRAILER + STEAM -->
 <div class="game-trailer">
 
     <h2>Watch the Trailer</h2>
 
     <!-- GAMEPLAY VIDEO -->
     <div class="gameplay-video">
-        <video 
-            autoplay 
-            muted 
-            loop 
+        <video
+            autoplay
+            muted
+            loop
             playsinline
             disablepictureinpicture
             controlslist="nodownload nofullscreen noremoteplayback"
             oncontextmenu="return false;">
-            
             <source src="assets/videos/gameplaytrailer.mp4" type="video/mp4">
         </video>
     </div>
 
     <!-- Steam Buy Now Button -->
-    <a href="https://store.steampowered.com/app/4251090/Keep_It_Contained/" 
-       target="_blank" 
+    <a href="https://store.steampowered.com/app/4251090/Keep_It_Contained/"
+       target="_blank"
        class="steam-buy-btn">
-        <img src="assets/icons/steam.svg" alt="Steam Icon"> 
+        <img src="assets/icons/steam.svg" alt="Steam Icon">
         Buy Now on Steam
     </a>
 
-<!-- ================= ART / POSTER SECTION ================= -->
-<section class="art-section">
-    <div class="art-container">
+    <!-- ART / POSTER SECTION -->
+    <section class="art-section">
+        <div class="art-container">
 
-        <!-- LEFT ARROW -->
-        <button class="art-arrow left" id="artPrev">&#10094;</button>
+            <!-- LEFT ARROW -->
+            <button class="art-arrow left" id="artPrev">&#10094;</button>
 
-        <!-- SLIDER WRAPPER -->
-        <div class="art-slider" id="artSlider">
-            <div class="art-track">
-
-                <!-- ITEM 1 -->
-                <div class="art-item">
-    <div class="poster-wrapper">
-
-        <div class="trailer-poster" id="posterTrigger">
-            <img src="assets/others/poster1.jpg"
-                 alt="Scientist Propaganda Poster"
-                 draggable="false"
-                 oncontextmenu="return false;">
-        </div>
-
-        <!-- ALT YAZI -->
-        <div class="poster-caption">
-            <h4>Scientist Propaganda Poster</h4>
-            <span>by @nicotinehound</span>
-        </div>
-
-    </div>
-</div>
-
-
+            <!-- SLIDER WRAPPER -->
+            <div class="art-slider" id="artSlider">
+                <div class="art-track">
+                    <div class="art-item">
+                        <div class="poster-wrapper">
+                            <div class="trailer-poster" id="posterTrigger">
+                                <img src="assets/others/poster1.jpg"
+                                     alt="Scientist Propaganda Poster"
+                                     draggable="false"
+                                     oncontextmenu="return false;">
+                            </div>
+                            <div class="poster-caption">
+                                <h4>Scientist Propaganda Poster</h4>
+                                <span>by @nicotinehound</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
+
+            <!-- RIGHT ARROW -->
+            <button class="art-arrow right" id="artNext">&#10095;</button>
+
         </div>
+    </section>
 
-        <!-- RIGHT ARROW -->
-        <button class="art-arrow right" id="artNext">&#10095;</button>
-
+    <!-- POSTER POPUP MODAL -->
+    <div class="poster-modal" id="posterModal">
+        <div class="poster-modal-inner">
+            <img src="assets/others/poster1.jpg" alt="Scientist Propaganda Poster">
+        </div>
     </div>
-</section>
-
-<!-- POSTER POPUP MODAL -->
-<div class="poster-modal" id="posterModal">
-    <div class="poster-modal-inner">
-        <img src="assets/others/poster1.jpg" alt="Scientist Propaganda Poster">
-    </div>
-</div>
-
 
     <!-- DISCORD CTA -->
     <div class="discord-cta">
         <h3>Want to Join the Containment Team?</h3>
         <p>
-            Become part of our growing community.  
+            Become part of our growing community.
             Get updates, share feedback, and connect with other researchers.
         </p>
-
         <a href="https://discord.gg/mrexGmcX9n"
            target="_blank"
            class="discord-btn">
@@ -281,25 +240,17 @@
 
 </div>
 
-
-
-
-
-<!-- ================= GLOBAL FOOTER ================= -->
+<!-- GLOBAL FOOTER -->
 <footer class="site-footer">
     <div class="footer-inner">
-
-        <!-- LEFT: LOGO + COPYRIGHT -->
         <div class="footer-left">
             <img src="assets/game_title.png" alt="Game Logo" class="footer-logo">
             <span>© 2026 Triarch Interactive. All rights reserved.</span>
         </div>
-
-        <!-- RIGHT: BUTTONS -->
         <div class="footer-right">
             <a href="contact.html" class="footer-btn">Contact</a>
-            <a href="https://store.steampowered.com/app/4251090/Keep_It_Contained/" 
-               target="_blank" 
+            <a href="https://store.steampowered.com/app/4251090/Keep_It_Contained/"
+               target="_blank"
                class="footer-btn buy-btn">
                 Buy Now
             </a>
@@ -307,4 +258,5 @@
     </div>
 </footer>
 
+</body>
 </html>

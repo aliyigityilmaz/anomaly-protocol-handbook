@@ -396,25 +396,27 @@ body::before {
 
 .manual-btn {
     display: inline-block;
-    background: rgba(139,26,26,0.08);
-    color: var(--text-primary);
+    background: rgba(139,26,26,0.16);
+    color: var(--text-primary);          /* eskisi: --text-primary ama opacity çok düşüktü görsel olarak */
     text-decoration: none;
-    padding: 14px 20px;
+    padding: 16px 20px;
     font-family: var(--font-mono);
-    font-size: 10px;
+    font-size: 11px;                     /* eskisi: 10px */
     letter-spacing: 2px;
     text-transform: uppercase;
     border-radius: var(--r-sm);
     transition: var(--t);
     width: 100%;
-    border: 1px solid rgba(139,26,26,0.3);
+    border: 1px solid rgba(196,43,43,0.55);  /* eskisi: 0.3 → 0.55 */
+    box-shadow: 0 0 18px rgba(139,26,26,0.18), inset 0 1px 0 rgba(255,255,255,0.04);
 }
 
 .manual-btn:hover {
-    background: rgba(139,26,26,0.18);
-    border-color: var(--red-bright);
+    background: rgba(139,26,26,0.28);
+    border-color: var(--red-hot);
     color: var(--red-hot);
-    box-shadow: var(--shadow-red);
+    box-shadow: 0 0 28px var(--red-glow), 0 4px 16px rgba(0,0,0,0.5);
+    letter-spacing: 2.5px;
 }
 
 .manual-note {
@@ -436,28 +438,28 @@ body::before {
     gap: 10px;
     width: 100%;
     background: var(--bg-elevated);
-    border: 1px solid var(--border-mid);
+    border: 1px solid rgba(255,255,255,0.12);   /* eskisi: --border-mid ~0.09 → 0.12 */
     border-radius: var(--r-sm);
     padding: 12px 16px;
     text-decoration: none;
-    color: var(--text-muted);
+    color: rgba(212,210,204,0.75);              /* eskisi: --text-muted ~0.45 → 0.75 */
     font-family: var(--font-mono);
-    font-size: 10px;
+    font-size: 11px;                            /* eskisi: 10px */
     letter-spacing: 1.5px;
     text-transform: uppercase;
     transition: var(--t);
 }
 
-.steam-btn img { width: 17px; height: 17px; opacity: 0.5; }
+.steam-btn img { width: 17px; height: 17px; opacity: 0.75; }  /* eskisi: 0.5 */
 
 .steam-btn:hover {
-    background: rgba(255,255,255,0.04);
-    border-color: var(--border-hot);
+    background: rgba(255,255,255,0.06);
+    border-color: rgba(255,255,255,0.22);
     color: var(--text-primary);
     transform: translateY(-1px);
 }
 
-.steam-btn:hover img { opacity: 0.85; }
+.steam-btn:hover img { opacity: 1; }
 
 /* ── GAME DETAILS ── */
 .game-details {
@@ -868,30 +870,31 @@ body::before {
     display: inline-flex;
     align-items: center;
     gap: 10px;
-    background: rgba(139,26,26,0.1);
-    color: rgba(210,160,160,0.85);
-    border: 1px solid rgba(139,26,26,0.28);
+    background: rgba(139,26,26,0.16);
+    color: rgba(220,180,180,0.95);              /* eskisi: ~0.85, daha net */
+    border: 1px solid rgba(139,26,26,0.5);      /* eskisi: 0.28 → 0.5 */
     font-family: var(--font-mono);
-    font-size: 10px;
+    font-size: 11px;                            /* eskisi: 10px */
     letter-spacing: 2.5px;
-    padding: 13px 26px;
+    padding: 15px 32px;                         /* eskisi: 13px 26px, biraz daha geniş */
     border-radius: var(--r-sm);
     text-decoration: none;
     transition: var(--t);
     text-transform: uppercase;
+    box-shadow: 0 0 20px rgba(139,26,26,0.2), inset 0 1px 0 rgba(255,255,255,0.04);
 }
 
-.discord-btn img { width: 18px; height: 18px; opacity: 0.5; }
+.discord-btn img { width: 18px; height: 18px; opacity: 0.8; }  /* eskisi: 0.5 */
 
 .discord-btn:hover {
-    background: rgba(139,26,26,0.2);
-    border-color: var(--red-core);
+    background: rgba(139,26,26,0.28);
+    border-color: var(--red-bright);
     color: var(--red-hot);
     transform: translateY(-2px);
-    box-shadow: 0 8px 24px var(--red-glow);
+    box-shadow: 0 8px 32px var(--red-glow), 0 0 20px rgba(139,26,26,0.35);
 }
 
-.discord-btn:hover img { opacity: 0.85; }
+.discord-btn:hover img { opacity: 1; }
 
 /* ── MANUALS PAGE ── */
 .container {
